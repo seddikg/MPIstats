@@ -6,9 +6,13 @@ function topPercent(numbersArray, note) {
     const sorted = numbersArray.sort((a,b)=>a-b)
     for (var i = 0; i < sorted.length; i++) {
         if (sorted[i] >= note) {
+            while(sorted[i]==note) {
+                i++
+            }
             break
         }}
-    return 100-(i+1)/sorted.length * 100
+
+    return 100-(i)/sorted.length * 100
 }
 
 document.getElementById("calculateBtn").addEventListener("click", () => {
