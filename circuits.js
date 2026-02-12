@@ -8,7 +8,7 @@ function topPercent(numbersArray, note) {
         if (sorted[i] >= note) {
             break
         }}
-    return (i+1)/sorted.length * 100
+    return 100-(i+1)/sorted.length * 100
 }
 
 document.getElementById("calculateBtn").addEventListener("click", () => {
